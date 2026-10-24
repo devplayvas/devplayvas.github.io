@@ -1,0 +1,49 @@
+/* 개인정보처리방침 등 문서 페이지 전용 스타일 (Vue 앱과 별개의 정적 페이지) */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #0f1222;
+  --muted: #5d6478;
+  --brand: #5b4cf0;
+  --line: #e4e7ef;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c0e16;
+    --card: #151826;
+    --text: #eceef6;
+    --muted: #9aa1b5;
+    --brand: #8f84ff;
+    --line: #23283b;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+  line-height: 1.7;
+}
+main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+header.brand { margin-bottom: 28px; }
+header.brand a { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-size: 20px; font-weight: 800; letter-spacing: -0.02em; }
+header.brand img { border-radius: 8px; }
+h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.3px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+h3 { font-size: 16px; margin: 20px 0 6px; }
+p, li { color: var(--text); }
+.muted { color: var(--muted); }
+a { color: var(--brand); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 20px; padding: 20px 22px; margin: 16px 0; }
+.app { display: flex; gap: 16px; align-items: flex-start; }
+.app img { width: 56px; height: 56px; flex: none; }
+.app h2 { margin: 0 0 4px; }
+.links a { margin-right: 16px; white-space: nowrap; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 600; width: 32%; }
+footer { margin-top: 48px; font-size: 14px; color: var(--muted); }
+code { font-size: 0.92em; overflow-wrap: anywhere; word-break: break-all; }
+p, li, td { overflow-wrap: anywhere; }

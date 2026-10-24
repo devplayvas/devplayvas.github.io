@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BlueBox 개인정보처리방침 · Playvas</title>
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="/legal.css">
+</head>
+<body>
+<main>
+  <header class="brand">
+    <a href="/"><img src="/logo.svg" alt="" width="32" height="32">Playvas</a>
+  </header>
+
+  <h1>BlueBox 개인정보처리방침</h1>
+  <p class="muted">시행일: 2026년 10월 24일 · <a href="#english">English</a></p>
+
+  <p>Playvas(이하 "개발자")는 Android 앱 BlueBox(이하 "앱")를 만들었습니다. 이 방침은 앱이 어떤 정보를 어떻게 다루는지 설명합니다.</p>
+
+  <div class="card">
+    <strong>요약</strong>
+    <ul>
+      <li>녹화 영상은 <strong>사용자의 휴대폰</strong>과, 사용자가 직접 연결한 <strong>사용자 본인의 클라우드</strong>(Google Drive)에만 저장됩니다.</li>
+      <li>개발자는 서버를 운영하지 않으며, 사용자의 영상·계정 정보·위치를 받거나 볼 수 없습니다.</li>
+      <li>앱에는 광고, 분석(통계), 추적 도구가 없습니다.</li>
+    </ul>
+  </div>
+
+  <h2>1. 앱이 다루는 정보</h2>
+  <table>
+    <tr><th>카메라 영상</th><td>녹화를 시작하면 휴대폰 갤러리의 <code>DCIM/BlueBox</code> 폴더에 저장됩니다. 설정한 용량을 넘으면 앱이 만든 오래된 영상부터 자동으로 지웁니다.</td></tr>
+    <tr><th>음성</th><td>설정에서 "오디오 녹음"을 켠 경우에만 영상과 함께 녹음됩니다. 기본값은 꺼짐입니다.</td></tr>
+    <tr><th>클라우드 계정 이메일</th><td>자동 업로드를 위해 Google 계정을 연결하면, 연결된 계정을 화면에 보여주려고 이메일 주소를 휴대폰 안에만 저장합니다. 백업이나 기기 이전에는 포함되지 않습니다.</td></tr>
+    <tr><th>앱 설정</th><td>화질, 저장 용량 같은 설정은 휴대폰 안에 저장됩니다. Android 백업을 켠 경우 설정값만 사용자의 Google 계정 백업에 포함될 수 있습니다(영상과 계정 정보는 제외).</td></tr>
+  </table>
+  <p>앱은 위치(GPS), 연락처, 전화번호, 기기 식별자 등을 수집하지 않습니다.</p>
+
+  <h2>2. 사용하는 권한</h2>
+  <ul>
+    <li><strong>카메라</strong>: 블랙박스 영상 녹화</li>
+    <li><strong>마이크</strong>(선택): 오디오 녹음을 켠 경우에만 요청</li>
+    <li><strong>알림</strong>: 녹화 중 표시와 녹화 중단·다시 로그인 필요 안내</li>
+    <li><strong>인터넷·네트워크 상태</strong>: 자동 업로드를 켠 경우 사용자의 클라우드로 영상 전송, Wi-Fi 연결 확인</li>
+  </ul>
+
+  <h2>3. 자동 업로드(선택 기능)</h2>
+  <p>사용자가 자동 업로드를 켜고 Google 계정을 연결한 경우에만, 녹화가 끝난 영상을 휴대폰에서 사용자의 Google Drive로 <strong>직접</strong> 전송합니다. 영상은 개발자를 거치지 않습니다.</p>
+  <ul>
+    <li><strong>요청하는 권한</strong>: <code>https://www.googleapis.com/auth/drive.file</code>. BlueBox가 만든 폴더와 파일에만 접근하며, 사용자의 다른 Drive 파일은 보거나 바꿀 수 없습니다.</li>
+    <li><strong>사용 목적</strong>: 업로드 폴더(기본 이름 "BlueBox") 만들기, 영상 파일 올리기, 같은 파일이 이미 있는지 확인하기, 연결된 계정 이메일 표시. 그 외의 목적으로 쓰지 않습니다.</li>
+    <li>접근 토큰은 Google Play 서비스가 관리하며, 앱이 따로 저장하거나 개발자에게 보내지 않습니다.</li>
+    <li>BlueBox가 Google API에서 받은 정보를 사용하고 다른 앱으로 전송하는 방식은 제한된 사용(Limited Use) 요구사항을 포함한 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 서비스 사용자 데이터 정책</a>을 따릅니다.</li>
+    <li>Google Drive에 올라간 영상은 Google의 약관과 개인정보처리방침에 따라 사용자의 계정에 보관됩니다.</li>
+  </ul>
+
+  <h2>4. 제3자 제공·처리 위탁</h2>
+  <p>개발자는 사용자의 정보를 제3자에게 제공하거나 처리를 맡기지 않습니다. 자동 업로드를 켠 경우의 전송은 사용자가 직접 연결한 클라우드 서비스(Google)로 사용자 본인의 요청에 따라 이루어집니다.</p>
+
+  <h2>5. 보관 기간과 삭제 방법</h2>
+  <ul>
+    <li>휴대폰의 영상: 순환 녹화 규칙에 따라 자동 삭제되거나, 사용자가 갤러리에서 직접 지울 수 있습니다.</li>
+    <li>클라우드 연결: 앱의 <strong>자동 업로드 설정 → 연결 해제</strong>로 언제든 해제할 수 있습니다. Google 계정의 <a href="https://myaccount.google.com/permissions">서드 파티 액세스 관리</a>에서도 BlueBox의 권한을 지울 수 있습니다.</li>
+    <li>앱을 삭제하면 앱 안에 저장된 설정과 계정 정보도 함께 지워집니다. 갤러리 영상과 클라우드에 올린 영상은 사용자가 직접 지울 때까지 남습니다.</li>
+  </ul>
+
+  <h2>6. 아동</h2>
+  <p>앱은 운전자를 위한 도구이며 만 14세 미만 아동을 대상으로 하지 않습니다.</p>
+
+  <h2>7. 방침 변경과 문의</h2>
+  <p>이 방침이 바뀌면 이 페이지에 시행일과 함께 알립니다. 개인정보 관련 문의는 아래로 연락해 주세요.</p>
+  <p>개인정보 보호 담당: Playvas · <a href="mailto:devplayvas@gmail.com">devplayvas@gmail.com</a></p>
+
+  <hr id="english" style="margin:40px 0;border:none;border-top:1px solid var(--line)">
+
+  <h1>BlueBox Privacy Policy</h1>
+  <p class="muted">Effective: October 24, 2026</p>
+  <p>BlueBox is an Android dashcam app made by Playvas ("we").</p>
+  <ul>
+    <li><strong>Videos</strong> are recorded only after you start recording and are saved on your phone (gallery folder <code>DCIM/BlueBox</code>). Old videos created by the app are deleted automatically when the storage limit you chose is reached. Audio is recorded only if you turn it on (off by default).</li>
+    <li><strong>We do not run servers</strong> and never receive your videos, account information, or location. The app contains no ads, analytics, or tracking.</li>
+    <li><strong>Optional automatic upload:</strong> if you connect your Google account, finished videos are sent directly from your phone to your own Google Drive. The app requests only the <code>drive.file</code> scope, so it can access only the folder and files it creates. It uses this access solely to create the upload folder, upload videos, check whether a file already exists, and show the connected account's email. Access tokens are managed by Google Play services and are not stored by the app or sent to us.</li>
+    <li>BlueBox's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
+    <li>The connected account's email is stored only on your phone and is excluded from backups. App settings may be included in Android backup if you enabled it.</li>
+    <li>We do not sell or share your information with third parties.</li>
+    <li>You can disconnect at any time in the app (Auto upload settings → Disconnect) or at <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>. Uninstalling the app removes its stored settings and account info; videos remain in your gallery and Drive until you delete them.</li>
+    <li>The app is not directed to children under 14.</li>
+    <li>Contact: <a href="mailto:devplayvas@gmail.com">devplayvas@gmail.com</a></li>
+  </ul>
+
+  <footer>© 2026 Playvas</footer>
+</main>
+</body>
+</html>
